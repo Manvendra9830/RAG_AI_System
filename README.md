@@ -10,22 +10,30 @@ This project is a Retrieval-Augmented Generation (RAG) system that allows users 
 ---
 
 ## 📂 Project Structure
+```bash
 LLM_advance_RAG_system/
 │
-├── data/pdfs/              # Uploaded PDFs
-├── processed/chunks.json   # Chunked text
-├── vector_store/faiss_index.bin
+├── data/
+│   └── pdfs/                  # Uploaded PDF files
+│
+├── processed/
+│   └── chunks.json            # Chunked text data
+│
+├── vector_store/
+│   └── faiss_index.bin        # FAISS vector index
 │
 ├── src/
-│   ├── loader.py           # PDF text extraction
-│   ├── chunker.py          # Text chunking
+│   ├── loader.py              # PDF text extraction
+│   ├── chunker.py             # Text chunking logic
 │
-├── api.py                  # Main FastAPI backend
-├── prepare_data.py         # Initial data processing
-├── build_index.py          # FAISS index creation
-├── .env                    # API keys
-├── requirements.txt
-
+├── api.py                     # FastAPI backend (main app)
+├── prepare_data.py            # PDF → text → chunks
+├── build_index.py             # FAISS index builder
+│
+├── .env                       # Environment variables (API keys)
+├── requirements.txt           # Dependencies
+└── README.md
+```
 ---
 
 ## ⚙️ Setup & Installation
@@ -71,15 +79,16 @@ Ask → /ask
 
 ## 🚀 Future Roadmap
 
-1. Multi-file upload  
-2. Metadata tracking  
-3. Database (PostgreSQL)  
-4. User system  
-5. Chat history  
-6. Voice integration  
-7. Frontend  
-8. use django framework instead of fastAPI
-9. use webhooks and other tools to make it good and scalable
+📁 Multi-document support
+🧾 Metadata filtering & ranking
+🗄️ PostgreSQL / MongoDB integration
+👤 Authentication system
+💬 Chat history memory
+🌐 Frontend (React / Next.js)
+🎙️ Voice-based querying
+🔄 Streaming responses
+⚙️ Migration to Django for large-scale systems
+☁️ Deployment (AWS / GCP / Azure)
 
 ---
 
