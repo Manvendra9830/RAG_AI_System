@@ -78,6 +78,8 @@ Ask → /ask
 5. Chat history  
 6. Voice integration  
 7. Frontend  
+8. use django framework instead of fastAPI
+9. use webhooks and other tools to make it good and scalable
 
 ---
 
